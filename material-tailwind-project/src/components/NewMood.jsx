@@ -100,7 +100,7 @@ function NewMood() {
     };
 
     return (
-        <div className="">
+        <div className="m-20">
             <Typography color="blue-gray" className="text-2xl font-bold pb-4">
                 Bonjour {userData.name}, quelle est ta satisfaction générale au travail aujourd'hui ?
             </Typography>
@@ -111,11 +111,11 @@ function NewMood() {
                 size="large"
                 emptyIcon={<UnratedIcon />}
                 icon={<RatedIcon />}
-                className="align-middle"
+                className="align-middle mb-20"
                 onChange={(value) => setNewSatisfaction(value)}
             />
             <Typography color="blue-gray" className="text-2xl font-bold pb-4">
-                Et comment évaluerais-tu ton niveau de stress ?
+                Comment évaluerais-tu ton niveau de stress ?
             </Typography>
             <div className="grid lg:col-span-2 md:col-span-2 sm:col-span-1"></div>
             <Rating
@@ -124,7 +124,20 @@ function NewMood() {
                 size="large"
                 emptyIcon={<UnratedIcon />}
                 icon={<RatedIcon />}
-                className="align-middle"
+                className="align-middle mb-20"
+                onChange={(value) => setNewStress(value)}
+            />
+            <Typography color="blue-gray" className="text-2xl font-bold pb-4">
+                Et comment évaluerais-tu ton niveau de fatigue ?
+            </Typography>
+            <div className="grid lg:col-span-2 md:col-span-2 sm:col-span-1"></div>
+            <Rating
+                value={newStress}
+                precision={1}
+                size="large"
+                emptyIcon={<UnratedIcon />}
+                icon={<RatedIcon />}
+                className="align-middle mb-20"
                 onChange={(value) => setNewStress(value)}
             />
             <Button color="green" className="mt-6" fullWidth onClick={postMood}>
