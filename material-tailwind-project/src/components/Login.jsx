@@ -28,23 +28,23 @@ function LoginCard() {
             <Card className="w-96">
                 <CardHeader
                     variant="gradient"
-                    color="gray"
-                    className="mb-4 grid h-28 place-items-center"
+                    color="white"
+                    className="mb-4 grid h-28 place-items-center border-2 border-green-500"
                 >
-                    <Typography variant="h3" color="white">
-                        Sign In
+                    <Typography variant="h2" color="green">
+                        Connexion
                     </Typography>
                 </CardHeader>
                 <CardBody className="flex flex-col gap-4">
-                    <Input label="Email" size="lg" type="email" color="lightBlue" placeholder="Email" value={email} onChange={(event) => setEmail(event.target.value)}/>
-                    <Input label="Password" size="lg" type="password" color="lightBlue" placeholder="Password" value={password} onChange={(event) => setPassword(event.target.value)}/>
+                    <Input label="Email" size="lg" type="email" color="green" placeholder="" value={email} onChange={(event) => setEmail(event.target.value)}/>
+                    <Input label="Mot de passe" size="lg" type="password" color="green" placeholder="" value={password} onChange={(event) => setPassword(event.target.value)}/>
                 </CardBody>
                 <CardFooter className="pt-0">
-                    <Button onClick={(event) => { signInWithEmailAndPasswordHandler(event, email, password) }} variant="gradient" fullWidth>
-                        Sign In
+                    <Button onClick={(event) => { signInWithEmailAndPasswordHandler(event, email, password) }} variant="gradient" color="green" fullWidth>
+                        Se connecter
                     </Button>
                     <Typography variant="small" className="mt-6 flex justify-center">
-                        Don&apos;t have an account?
+                        Vous n&apos;avez pas de compte ?
                         <Typography
                             as="a"
                             href="/signup"
@@ -52,7 +52,7 @@ function LoginCard() {
                             color="blue-gray"
                             className="ml-1 font-bold"
                         >
-                            Sign up
+                            Créez un compte
                         </Typography>
                     </Typography>
                 </CardFooter>

@@ -58,8 +58,6 @@ function MentionLegales () {
                 <p>95 Avenue Parmentier<br />75011, Paris 11</p>
                 <br />
                 <p>Email : <a href='mailto:contact@moodly.app'>contact@moodly.app</a></p>
-                <br />
-                <p>Directeur de la publication : Corto Colloc<br />Hébergement : Firebase<br />Maintenance : Moodly</p>
             </div>
             <div style={{
                 paddingTop:"50px"
