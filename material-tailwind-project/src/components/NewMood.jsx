@@ -127,7 +127,7 @@ function NewMood() {
                 className="align-middle"
                 onChange={(value) => setNewStress(value)}
             />
-            <Button className="mt-6" fullWidth onClick={postMood}>
+            <Button color="green" className="mt-6" fullWidth onClick={postMood}>
                 Envoyer mon mood
             </Button>
 
