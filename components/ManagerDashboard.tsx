@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { collection, query, getDocs, where } from 'firebase/firestore';
+import { collection, query, getDocs } from 'firebase/firestore';
 import { db } from '@/lib/FirebaseConfig';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
@@ -9,9 +9,16 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
 // Initialiser Chart.js
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
+interface DailyStat {
+  date: string;
+  fatigue: number;
+  stress: number;
+  mood: number;
+}
+
 const ManagerDashboard = () => {
   const [averageData, setAverageData] = useState({ fatigue: 0, stress: 0, mood: 0 });
-  const [dailyStats, setDailyStats] = useState<number[]>([]); // Pour les données journalières du graphique
+  const [dailyStats, setDailyStats] = useState<DailyStat[]>([]); // Met à jour le type pour inclure des objets
 
   useEffect(() => {
     // Fonction pour récupérer les réponses des employés
@@ -30,7 +37,7 @@ const ManagerDashboard = () => {
 
         querySnapshot.forEach((doc) => {
           const data = doc.data();
-          const date = new Date(data.date).toLocaleDateString(); // Format date
+          const date = new Date(data.date).toLocaleDateString(); // Format de la date
 
           // Initialiser l'entrée pour la date si elle n'existe pas
           if (!dailyData[date]) {
@@ -59,14 +66,14 @@ const ManagerDashboard = () => {
         }
 
         // Préparer les données journalières pour le graphique
-        const dailyStatsArray = Object.keys(dailyData).map((date) => ({
+        const dailyStatsArray: DailyStat[] = Object.keys(dailyData).map((date) => ({
           date,
           fatigue: dailyData[date].fatigue / dailyData[date].count,
           stress: dailyData[date].stress / dailyData[date].count,
           mood: dailyData[date].mood / dailyData[date].count,
         }));
 
-        setDailyStats(dailyStatsArray);
+        setDailyStats(dailyStatsArray); // Met à jour le tableau d'objets correctement typé
       } catch (error) {
         console.error('Erreur lors de la récupération des réponses des employés :', error);
       }
