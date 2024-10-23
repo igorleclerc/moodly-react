@@ -24,7 +24,7 @@ const LoginPage = () => {
     <div className="flex items-center justify-center min-h-screen">
       <div className="w-full h-full p-8 flex flex-col justify-center bg-white">
         {/* Logo */}
-        <img src="../public/logo_moodly.svg" alt="Moodly logo" className="mx-auto h-16 w-auto mb-6" />
+        <img src="/logo_moodly.svg" alt="Moodly logo" className="mx-auto h-16 w-auto mb-6" />
 
         {/* Titre */}
         <h2 className="text-center text-3xl font-bold text-gray-900 mb-8">Se connecter</h2>
