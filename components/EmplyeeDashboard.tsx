@@ -40,6 +40,8 @@ const EmployeeDashboard = () => {
 
   return (
     <div className="flex flex-col items-center justify-center space-y-4">
+      {/* Logo */}
+      <img src="/logo_moodly.svg" alt="Moodly logo" className="mx-auto h-30 w-auto mb-6" />
       <h2 className="text-xl font-bold">Évaluez votre journée</h2>
 
       {/* Question 1 - Niveau de fatigue */}
@@ -51,6 +53,7 @@ const EmployeeDashboard = () => {
           max="10"
           value={fatigue || 5}
           onChange={(e) => setFatigue(Number(e.target.value))}
+          color="green"
           className="mt-2 w-64"
         />
         <span>{fatigue || 5}</span>
@@ -85,7 +88,7 @@ const EmployeeDashboard = () => {
       </div>
 
       <button
-        className="mt-4 bg-blue-500 text-white font-bold py-2 px-4 rounded"
+        className="mt-16 bg-[#FFAC5E] text-white font-bold py-2 px-12 rounded-3xl"
         onClick={handleSubmit}
       >
         Soumettre

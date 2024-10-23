@@ -22,9 +22,9 @@ const LoginPage = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen">
-      <div className="w-full h-full p-8 flex flex-col justify-center bg-white">
+      <div className="w-full h-full px-8 mx-6 flex flex-col justify-center bg-white">
         {/* Logo */}
-        <img src="/logo_moodly.svg" alt="Moodly logo" className="mx-auto h-16 w-auto mb-6" />
+        <img src="/logo_moodly.svg" alt="Moodly logo" className="mx-auto h-30 w-auto mb-6" />
 
         {/* Titre */}
         <h2 className="text-center text-3xl font-bold text-gray-900 mb-8">Se connecter</h2>
@@ -42,7 +42,7 @@ const LoginPage = () => {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="appearance-none rounded-md block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="appearance-none rounded-3xl block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="Adresse mail"
               />
             </div>
@@ -56,7 +56,7 @@ const LoginPage = () => {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="appearance-none rounded-md block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="appearance-none rounded-3xl block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="Mot de passe"
               />
             </div>
@@ -69,7 +69,7 @@ const LoginPage = () => {
           <div>
             <button
               type="submit"
-              className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-3xl text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="w-full flex justify-center py-2 px-8 mt-12 border border-transparent text-xl font-medium rounded-3xl text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               Let's start!
             </button>
