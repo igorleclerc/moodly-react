@@ -28,15 +28,18 @@
 
 **1.** Clone le projet :
 
-**   **```bash
+```
+git clone https://github.com/igorleclerc/moodly-react
 
-**   **git clone https://github.com/igorleclerc/moodly-react
+```
 
-**	**2.**	**Installe les dépendances :
+**2.**	Installe les dépendances :
 
-pnpm install
+```pnpm
+pnpm install --force
+```
 
-**	**3.**	**Configure Firebase :
+3. Configure Firebase :
 
 **	**•**	**Crée un projet Firebase et active l’authentification par email et mot de passe.
 
