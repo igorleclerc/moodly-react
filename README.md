@@ -30,7 +30,7 @@
 
 **   **```bash
 
-**   **git clone https://github.com/ton-github/moodly.git
+**   **git clone https://github.com/igorleclerc/moodly-react
 
 **	**2.**	**Installe les dépendances :
 
