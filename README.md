@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎯 Moodly - Application de Suivi d'Humeur au Travail
 
-## Getting Started
+****Moodly**** est une application conçue pour permettre aux employés d'évaluer leur niveau de fatigue, de stress et leur humeur générale quotidiennement. Les managers peuvent consulter les statistiques anonymes pour surveiller l'état de bien-être de leur équipe.
 
-First, run the development server:
+## 🚀 Fonctionnalités
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**-** ****Évaluation quotidienne**** : Les employés peuvent répondre à un questionnaire sur leur niveau de fatigue, de stress et d'humeur.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**-** ****Carrousel interactif**** : Interface utilisateur simple et intuitive avec un carrousel pour les différentes étapes de l'évaluation.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**-** ****Statistiques pour managers**** : Les managers ont accès à des graphiques montrant l'évolution de l'humeur des employés.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**-** ****Limitation à deux envois par jour**** : Les employés peuvent soumettre leur évaluation deux fois par jour (matin et soir).
 
-## Learn More
+## 🛠️ Technologies utilisées
 
-To learn more about Next.js, take a look at the following resources:
+**-** ****Next.js**** 15
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**-** ****TypeScript****
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**-** ****TailwindCSS**** pour le design et le style.
 
-## Deploy on Vercel
+**-** ****Firebase**** pour l'authentification et le stockage des données.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**-** ****Chart.js**** pour l'affichage des graphiques statistiques.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⚙️ Installation et configuration
+
+**1.** Clone le projet :
+
+**   **```bash
+
+**   **git clone https://github.com/ton-github/moodly.git
+
+**	**2.**	**Installe les dépendances :
+
+pnpm install
+
+**	**3.**	**Configure Firebase :
+
+**	**•**	**Crée un projet Firebase et active l’authentification par email et mot de passe.
+
+**	**•**	**Crée une base de données Firestore avec les collections nécessaires (**users**, **moods**).
+
+**	**4.**	**Démarre le serveur de développement :
+
+pnpm run dev
+
+**🚧 Structure du projet**
+
+.
+
+├── README.md
+
+├── app
+
+│ **  **├── home
+
+│ **  **│ **  **├── add-user
+
+│ **  **│ **  **├── articles
+
+│ **  **│ **  **├── profile
+
+│ **  **│ **  **└── user-management
+
+│ **  **├── layout.tsx
+
+├── components
+
+│ **  **├── Navbar.tsx
+
+│ **  **└── UserTable.tsx
+
+├── lib
+
+│ **  **└── FirebaseConfig.ts
+
+├── public
+
+│ **  **├── logo_moodly.svg
+
+├── tailwind.config.ts
+
+└── tsconfig.json
+
+**✨ Fonctionnalités à venir**
+
+**	**•**	****Améliorations graphiques** pour les managers.
+
+**	**•**	****Notifications** pour rappeler aux employés de remplir leurs évaluations.
+
+**	**•**	****PWA (Progressive Web App)** ou Convertion App mobile 
+
+**🧑‍💻 Contributeurs**
+
+**	**•**	**Igor Le Clerc**
+
+**	**•**	**Elsa Bessonnet**
+
+**	**•**	**Mai-Lyne Verger**
+
+**	**•**	**Nina Chastanier**
+
+**	**•**	**Benjamin Missoffe**
+
+$$
+
+
+$$
+
+**📄 License**
+
+Ce projet est sous licence MIT.
+
+
+#### 📋 Todoo :
+
+* [ ] Terminer la conversion en app mobile via capacitor
+* [ ] Terminer le front
+* [ ] CGV
+* [ ] Paramètres & gestion données personnelles
+* [ ] Améliorer la partie Dashbaord manager
+* [ ] Ajouter la partie articles
